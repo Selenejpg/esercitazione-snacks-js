@@ -6,10 +6,8 @@ let list = [];
 let i = 0;
 
 while (i < nomi.length){
- 
-    console.log(i);
-    
-    let listNomi = nomi[i] + " " + cognomi[i];
+   
+    let listNomi = `${nomi[i]} ${cognomi[i]}`;
     console.log(listNomi);
     i++;
 
@@ -21,7 +19,14 @@ console.log(list)
 
 let l = 0;
 
-let random = Math.floor(Math.random() * (list.length));
-console.log(list[random])
+let bottone = document.getElementById("bottone")
 
-let risultato = document.getElementById("scrittura-risultato").innerHTML = list[random];
+bottone.addEventListener("click",
+
+    function() {
+        
+        let random = Math.floor(Math.random() * (list.length));
+        document.getElementById("nomeRandom").innerHTML = list[random];
+        console.log(list[random]);
+    }
+)
